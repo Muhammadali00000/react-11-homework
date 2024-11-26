@@ -9,7 +9,10 @@ const Category = () => {
     <>
     <section className="category">
         <div className="container">
-            <SectionTitle position='center'>NEW ARRIVALS</SectionTitle>
+
+            <div id='ARRIVALS'>
+            <SectionTitle position='center' >NEW ARRIVALS</SectionTitle>
+            </div>
 
 
             <div className="category__wrapper">
@@ -24,7 +27,13 @@ const Category = () => {
 
     <hr style={{margin: '60px 0'}} />
 
+    <section className="category">
+    <div className="container">
+
+
+        <div id='selling'> 
             <SectionTitle position='center'>top selling</SectionTitle>
+        </div>
 
 
             <div className="category__wrapper">
@@ -35,6 +44,9 @@ const Category = () => {
             </div>
 
             <Btn>View All</Btn>
+
+            </div>
+    </section>
 
     </>
     )

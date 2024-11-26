@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import './Header.scss'
+import { Link } from 'react-router-dom';
 
 const Header = () => {
 
@@ -14,13 +15,22 @@ const Header = () => {
         <header className="header">
         <div className="container">
             <div className="header__wrapper">
-                <h1 className="logo">SHOP.CO</h1>
+                <Link to={'/'} className="logo">SHOP.CO</Link>
 
                 <div className={`header__menu ${isActive ? 'active' : ''}`}>
-                    <a href="">Shop ↓</a>
-                    <a href="">On Sale</a>
-                    <a href="">New Arrivals</a>
-                    <a href="">Brands</a>
+                    <Link to={'/sale'} className='dropdown'>
+                        Shop 
+                        <img src="https://www.clipartmax.com/png/small/53-533202_no-minimum-online-catalog-art-approval-icon-arrow-down-svg.png" alt="" />
+
+                        <div>
+                            <Link to={'/'}>Man</Link>
+                            <Link to={'/'}>Women</Link>
+                            <Link to={'/'}>Kids</Link>
+                        </div>
+                    </Link> 
+                    <a href="/#selling">On Sale</a>
+                    <a href="/#ARRIVALS">New Arrivals</a>
+                    <Link to={'/'}>Brands</Link>
                 </div>
 
                 <input className='search' type="text" placeholder='🔍  Search for products...' />
